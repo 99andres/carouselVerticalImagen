@@ -1,11 +1,11 @@
-let btnIzquierdo=document.getElementById("btnIzquierdo")
+let btnIzquierdo=document.getElementById("btnArriba")
 let container=document.getElementById("container")
-let btnDerecho=document.getElementById("btnDerecho")
+let btnDerecho=document.getElementById("btnAbajo")
 let valor=0;
 btnIzquierdo.style.display="none"    
 btnDerecho.addEventListener('click',function(){
    
-   valor=container.scrollLeft+=260
+   valor=container.scrollTop+=170
    btnIzquierdo.style.display="block"
 
     
@@ -16,9 +16,9 @@ btnDerecho.addEventListener('click',function(){
 })
 btnIzquierdo.addEventListener('click',function(e){ 
     
-    valor-=260
+    valor-=170
     if(valor<=0){
        btnIzquierdo.style.display="none"
     }
-    container.scrollLeft=valor
+    container.scrollTop=valor
 })    
